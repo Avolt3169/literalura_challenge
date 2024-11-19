@@ -1,0 +1,51 @@
+Lista Detallada de Funciones para el Proyecto
+Configuración del Proyecto 
+1.1. Configurar el entorno con Java 17+, Spring Boot 3.2.3, Maven y PostgreSQL. listo
+1.2. Crear el proyecto en Spring Initializr con las dependencias necesarias.   listo
+1.3. Configurar application.properties para la conexión a la base de datos PostgreSQL. listo
+
+Construcción del Cliente HTTP 
+2.1. Crear un cliente HTTP (HttpClient) para realizar solicitudes GET.
+2.2. Configurar las solicitudes con parámetros específicos utilizando HttpRequest.
+2.3. Manejar las respuestas de la API usando HttpResponse.
+
+Consumo de la API 
+3.1. Realizar consultas a la API Gutendex para buscar libros por título.
+3.2. Filtrar libros por idioma al realizar la consulta.
+3.3. Recuperar el primer autor de la lista de autores devuelta por la API.
+3.4. Manejar errores en las respuestas de la API (conexión fallida, JSON vacío, etc.).
+
+Procesamiento de Datos JSON 
+4.1. Usar Jackson para mapear datos JSON a objetos Java.
+4.2. Crear clases para representar libros y autores con atributos requeridos.
+4.3. Configurar las anotaciones necesarias (@JsonIgnoreProperties, @JsonAlias).
+4.4. Validar y transformar los datos obtenidos antes de usarlos.
+
+Gestión de la Base de Datos 
+5.1. Crear entidades JPA para libros y autores.
+5.2. Configurar una relación uno a muchos entre libro y autor.
+5.3. Crear repositorios JPA para manejar libros y autores (inserción, consulta, actualización).
+5.4. Insertar libros y sus respectivos autores en la base de datos.
+
+Consultas y Filtrado 
+6.1. Listar todos los libros guardados en la base de datos.
+6.2. Listar todos los autores guardados en la base de datos.
+6.3. Consultar libros por título.
+6.4. Filtrar libros por idioma.
+6.5. Consultar autores vivos en un año determinado (derived query).
+
+Interacción con el Usuario 
+7.1. Implementar un menú interactivo en consola.
+7.2. Agregar opción para buscar un libro por título.
+7.3. Agregar opción para listar todos los libros buscados.
+7.4. Agregar opción para listar todos los autores guardados.
+7.5. Agregar opción para buscar autores vivos en un año específico.
+7.6. Manejar entradas inválidas del usuario (números fuera de rango, texto incorrecto).
+7.7. Mostrar mensajes claros de éxito, error o datos no encontrados.
+
+Pruebas y Validaciones 
+8.1. Probar el cliente HTTP con distintos endpoints de la API.
+8.2. Validar que los datos JSON se procesen correctamente en objetos Java.
+8.3. Probar las inserciones y consultas en la base de datos.
+8.4. Validar entradas del usuario en el menú interactivo.
+8.5. Manejar casos extremos, como falta de conexión a la API o base de datos vacía.

@@ -1,4 +1,4 @@
-package com.catalogo.literalura;
+package com.catalogo.literalura.runner;
 
 import com.catalogo.literalura.model.DatosConsumirApi;
 import com.catalogo.literalura.service.ConvertirDatos;
@@ -19,7 +19,7 @@ public class LiteraluraApplication implements CommandLineRunner {
 		var url = "https://gutendex.com/books/";
 		var consumirApi = new ConsumirApi();
 		var json = consumirApi.datosApi(url);
-		ConvertirDatos conversor = new ConvertirDatos();
+		var conversor = new ConvertirDatos();
 		var datos = conversor.obtenerDatos(json, DatosConsumirApi.class);
 		System.out.println(datos);
 	}
